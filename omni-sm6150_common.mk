@@ -19,6 +19,11 @@
 # product configuration (apps).
 #
 
+# Prebuilt
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/motorola/dynamic_common/prebuilt/product,product) \
+    $(call find-copy-subdir-files,*,device/motorola/dynamic_common/prebuilt/system,system)
+
 $(call inherit-product, device/motorola/dynamic_common/omni-dynamic_common.mk)
 
 $(call inherit-product, device/motorola/sm6150_common/sm6150_common.mk)
