@@ -22,6 +22,11 @@
 
 $(call inherit-product, device/motorola/dynamic_common/dynamic_common.mk)
 
+# Prebuilt
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,device/motorola/sm6150_common/prebuilt/system,system) \
+    $(call find-copy-subdir-files,*,device/motorola/sm6150_common/prebuilt/product,product)
+
 # Boot control
 PRODUCT_PACKAGES += \
     bootctrl.sm6150.recovery
